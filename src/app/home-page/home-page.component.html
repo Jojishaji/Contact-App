@@ -1,0 +1,18 @@
+<main> <li class="navLi">
+    <input style="height: 33px;" type="search" [(ngModel)]="searchKey" placeholder="&nbsp;Search Contacts here..." >
+    <br><button type="button"><i class="ri-search-line"></i></button></li>
+    <section>
+        <div class="card" routerLink="viewContact/{{contact.id}}" *ngFor=" let contact of allContacts | filter:searchKey:'name'">
+            <div class="image"><img [src]="contact.photo" alt="image"></div>
+            <div class="details">
+                <p class="name">Name:</p><b>{{contact.name}}</b>
+                <p  class="phoneNum">Phone:</p><b>{{contact.mobile}}</b>
+                <p class="bioBtn">
+                    <button routerLink="**"><i class="ri-chat-4-fill"></i></button>
+                    <button routerLink="editContact/{{contact.id}}"><i class="ri-edit-2-fill"></i></button>
+                    <button  routerLink="**"><i class="ri-share-forward-fill"></i></button>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>

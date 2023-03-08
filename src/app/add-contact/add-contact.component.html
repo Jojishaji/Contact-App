@@ -1,0 +1,54 @@
+<section>
+  
+    <div class="btmPart">
+        
+        <ul class="Bioss"><form #addContactForm="ngForm">
+            <h1>Add New Contact</h1>
+            <div class="image"><img [src]="contact.photo" alt="image"></div>
+            <li>
+                <label  for="">Contact Id</label>:<input #id="ngModel" name="id" [(ngModel)]="contact.id" type="text"  required>
+                <div class="empty" *ngIf="id.invalid && id.touched">*field is missing</div>
+            </li>
+            <li>
+                <label for="">Full Name</label>:<input #name="ngModel" name="name" [(ngModel)]="contact.name" type="text"  required>
+                <div class="empty" *ngIf="name.invalid && name.touched">*field is missing</div>
+            
+            </li>
+            <li>
+                <label for="">Phone</label>:<input pattern="[0-9]*" minlength="10" maxlength="10" type="tel" #mobile="ngModel" name="mobile" [(ngModel)]="contact.mobile" type="text"  required>
+                <div class="empty" *ngIf="mobile.invalid && mobile.touched">*enter a valid number</div>
+            
+            </li>
+            <li>
+                <label for="">Image Url</label>:<input #photo="ngModel" name="photo" [(ngModel)]="contact.photo"  type="text"  required>
+                <div class="empty" *ngIf="photo.invalid && photo.touched">*field is missing</div>
+            
+            </li>
+            <li>
+                <label for="">Email</label>:<input #email="ngModel" email name="email" [(ngModel)]="contact.email" type="text"  required >
+                <div class="empty" *ngIf="email.invalid && email.touched">*enter a valid mail</div>
+            
+            </li>
+            <li>
+                <label for="">Company</label>:<input #company="ngModel" name="comapany" [(ngModel)]="contact.company" type="text"  required>
+                <div class="empty" *ngIf="company.invalid && company.touched">*field is missing</div>
+            
+            </li>
+            <li>
+                <label for="">Title</label>:<input #title="ngModel" name="title" [(ngModel)]="contact.title" type="text"   required>
+                <div class="empty" *ngIf="title.invalid && title.touched">*field is missing</div>
+            
+            </li>
+            <li>
+                <label for="">Group</label>:
+                <select name="groupId"  [(ngModel)]="contact.groupId">
+                    <option selected hidden disabled>{{contact.groupId}}</option>
+                    <option  [value]="group.id" *ngFor = "let group of groups">{{group.name}}</option>
+                   
+                  </select>
+                  &nbsp;<input [disabled]="addContactForm.invalid" (click)="addContact(contact)" style="background-color: black;color: aliceblue;cursor: pointer;width: 80px;" type="button" value="Add"> &nbsp;<input routerLink="" style="background-color: black;color: aliceblue;cursor: pointer;width: 80px;" type="button" value="Close">
+            </li>
+        </form></ul>
+        
+    </div>
+</section>

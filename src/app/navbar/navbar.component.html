@@ -1,0 +1,42 @@
+<nav>
+<ul class="navUl">
+    <p class="logo"><a routerLink=""><i class='bx bxs-contact'></i>ContactBook</a></p>
+   
+    <li class="navLi"><a class="homeBut" routerLink="">Home</a></li>
+    <li class="navLi"><a class="signBut" routerLink="**"><i class="ri-user-add-fill"></i>SignUp</a></li>
+    <li class="navLi"><a class="loginBut" routerLink="**"><i class="ri-login-box-fill"></i>Login</a></li>
+</ul>
+</nav>
+<aside class="sidebar">
+    <div>
+       <ul class="sideUl">
+           <li class="sideLi babu" id="defcreate" routerLink="addContact" ><i class="ri-add-circle-fill"></i> Add contact</li><br>
+           <li class="sideLi" id="defbox" routerLink=""><i class='bx bx-group'></i> All contacts</li>
+           <li class="sideLi"><i class='bx bx-reset'></i> Frequently contacted</li>
+           <li class="sideLi" routerLink="**"><i class='bx bx-add-to-queue'></i> Merge & fix</li>
+       </ul>
+    </div>   
+    <div>
+       <ul class="sideUl">
+           <li  class="sideLi" routerLink="**"><i class="ri-folder-user-fill"></i> Groups</li>
+           <li class="sideLi" routerLink="**"><i class="ri-folder-add-fill"></i> Create group</li>
+       </ul>
+    </div>   
+    <div>
+       <ul class="sideUl">
+           <li class="sideLi" routerLink="**"><i class="ri-download-2-fill"></i> Import</li>
+           <li class="sideLi" routerLink="**"><i class="ri-upload-2-fill"></i> Export</li>
+           <li class="sideLi" routerLink="**"><i class="ri-printer-fill"></i> Print</li>
+       </ul>
+    </div>   
+    <div>
+       <ul class="sideUl">
+           <li class="sideLi" routerLink="**"><i class="ri-book-read-fill"></i> Other contacts</li>
+           <li class="sideLi" routerLink="**"><i class="ri-delete-bin-2-fill"></i> Trash</li>
+       </ul>
+    </div>   
+   </aside>
+   <main>
+    <router-outlet>
+    </router-outlet>
+   </main>

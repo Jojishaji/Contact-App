@@ -1,0 +1,39 @@
+<section>
+    <div class="topPart">
+        <div class="bioImg"><img width="100%" [src]="contact.photo" alt=""></div>
+        <div class="sep">
+            <div style="display: flex;justify-content: space-between;">
+                <div class="bioName"><h1>{{contact.name}}</h1></div>
+                <button class="bioEditbtn" routerLink="../../editContact/{{contact.id}}"><i class='bx bxs-edit-alt bx-md'></i></button>
+            </div>
+            <div class="bioPhNo"><i class='bx bxs-phone-call bx-sm'></i>{{contact.mobile}}</div>
+        </div>
+    </div>
+    <div class="btmPart">
+        <ul class="Bioss">
+            <li>
+                <label for="">Full Name &nbsp;: </label><input type="text" value="{{contact.name}}" readonly>
+            </li>
+            <li>
+                <label for="">Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label><input type="text" value="{{contact.mobile}}" readonly>
+            </li>
+            <li>
+                <label for="">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label><input type="text" value="{{contact.email}}" readonly>
+            </li>
+            <li>
+                <label for="">Company &nbsp;: </label><input type="text" value="{{contact.company}}" readonly>
+            </li>
+            <li>
+                <label for="">Title &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label><input type="text" value="{{contact.title}}" readonly>
+            </li>
+            <li>
+                <label for="">Group  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</label><input type="text" value="{{group}}" readonly>
+            </li>
+            <br>
+            <li>
+                <button (click)="deleteContact(contact.id)" style="filter: invert(100%);width: 100px;cursor: pointer;"><i class="ri-delete-bin-fill"></i></button>
+                <button style="filter: invert(100%);width: 100px;cursor: pointer;"><i class="ri-share-forward-fill"></i></button>
+            </li>
+        </ul>
+    </div>
+</section>
